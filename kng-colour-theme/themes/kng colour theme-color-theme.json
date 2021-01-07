@@ -9,14 +9,23 @@
 	},
 	"tokenColors": [
 		{
-			"name": "Comment",
+			"name" : "Comment",
+			"scope" : [
+				"comment.kng",
+			],
+			"settings" : {
+				"fontStyle": "italic bold underline",
+				"foreground": "#e4e4e4"
+			}
+		},
+		{
+			"name": "String",
 			"scope": [
-				"comment",
-				"punctuation.definition.comment"
+				"string.quoted.double.kng"
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#546E7A"
+				"foreground": "#ff6586"
 			}
 		},
 		{
