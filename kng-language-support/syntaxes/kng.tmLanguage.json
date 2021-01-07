@@ -15,8 +15,9 @@
 	"repository": {
 		"comment" : {
 			"patterns": [{
-				"name" : "comment.kng",
-				"match" : "(?s)/\\*.*?\\*/"
+				"name" : "comment.single.kng",
+				"begin": "//",
+				"end" : "$\n?"
 			}]
 		},
 		"expression" : {
@@ -48,36 +49,36 @@
 			"begin": "\\(",
 			"end": "\\)",
 			"beginCaptures": {
-			  "0": { "name": "punctuation.paren.open" }
+			  "0": { "name": "open.paren.expression.kng" }
 			},
 			"endCaptures": {
-			  "0": { "name": "punctuation.paren.close" }
+			  "0": { "name": "close.paren.expression.kng" }
 			},
-			"name": "expression.group",
+			"name": "paren.expression.kng",
 			"patterns": [{ "include": "#expression" }]
 		  },
 		"curly-expression": {
-			"begin": "\\(",
-			"end": "\\)",
+			"begin": "\\{",
+			"end": "\\}",
 			"beginCaptures": {
-			  "0": { "name": "punctuation.curly.open" }
+			  "0": { "name": "open.curly.expression.kng" }
 			},
 			"endCaptures": {
-			  "0": { "name": "punctuation.curly.close" }
+			  "0": { "name": "close.curly.expression.kng" }
 			},
-			"name": "expression.group",
+			"name": "curly.expression.kng",
 			"patterns": [{ "include": "#expression" }]
 		},
 		"bracket-expression": {
 			"begin": "\\[",
 			"end": "\\]",
 			"beginCaptures": {
-			  "0": { "name": "punctuation.bracket.open" }
+			  "0": { "name": "open.bracket.expression.kng" }
 			},
 			"endCaptures": {
-			  "0": { "name": "punctuation.bracket.close" }
+			  "0": { "name": "close.curly.expression.kng" }
 			},
-			"name": "expression.group",
+			"name": "bracket.expression.kng",
 			"patterns": [{ "include": "#expression" }]
 		  }
 	},
