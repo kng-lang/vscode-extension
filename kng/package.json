@@ -1,0 +1,25 @@
+{
+    "name": "kng",
+    "displayName": "kng",
+    "description": "kng language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kng",
+            "aliases": ["kng", "kng"],
+            "extensions": [".kng",".king",".k"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kng",
+            "scopeName": "source.kng",
+            "path": "./syntaxes/kng.tmLanguage.json"
+        }]
+    }
+}
