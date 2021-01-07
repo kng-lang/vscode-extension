@@ -1,0 +1,21 @@
+{
+    "name": "kng-colour-theme",
+    "displayName": "kng-colour-theme",
+    "description": "kng colour theme",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "kng colour theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/kng colour theme-color-theme.json"
+            }
+        ]
+    }
+}

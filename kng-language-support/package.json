@@ -1,6 +1,6 @@
 {
-    "name": "kng",
-    "displayName": "kng",
+    "name": "kng-language-support",
+    "displayName": "kng language support",
     "description": "kng language support",
     "version": "0.0.1",
     "engines": {

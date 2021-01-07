@@ -1,0 +1,76 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "kng",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"expression" : {
+			"patterns" : [
+				{"include" : "#strings"},
+				{"include" : "#paren-expression"},
+				{"include" : "#curly-expression"},
+				{"include" : "#bracket-expression"}
+				]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.kng",
+				"match": "\\b(if|while|for|ret|break|in)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.kng",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.kng",
+					"match": "\\\\."
+				}
+			]
+		},
+		"paren-expression": {
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures": {
+			  "0": { "name": "punctuation.paren.open" }
+			},
+			"endCaptures": {
+			  "0": { "name": "punctuation.paren.close" }
+			},
+			"name": "expression.group",
+			"patterns": [{ "include": "#expression" }]
+		  },
+		"curly-expression": {
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures": {
+			  "0": { "name": "punctuation.curly.open" }
+			},
+			"endCaptures": {
+			  "0": { "name": "punctuation.curly.close" }
+			},
+			"name": "expression.group",
+			"patterns": [{ "include": "#expression" }]
+		},
+		"bracket-expression": {
+			"begin": "\\[",
+			"end": "\\]",
+			"beginCaptures": {
+			  "0": { "name": "punctuation.bracket.open" }
+			},
+			"endCaptures": {
+			  "0": { "name": "punctuation.bracket.close" }
+			},
+			"name": "expression.group",
+			"patterns": [{ "include": "#expression" }]
+		  }
+	},
+	"scopeName": "source.kng"
+}
